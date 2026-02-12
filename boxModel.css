@@ -1,0 +1,110 @@
+
+  :root{
+    --pad: 16;
+    --bor: 4;
+    --mar: 20;
+  }
+
+  body{
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    margin: 24px;
+    background: #f7f7fb;
+    color: #111;
+  }
+
+  h1{ margin-bottom: 8px; }
+  .sub{ color:#555; margin-bottom:18px; }
+
+  .panel{
+    display:grid;
+    grid-template-columns: 320px 1fr;
+    gap: 24px;
+    align-items:start;
+  }
+
+  /* Controls */
+  .controls{
+    background:#fff;
+    border:1px solid #e6e6ef;
+    border-radius:8px;
+    padding:16px;
+  }
+  .controls h2{ font-size:16px; margin:0 0 12px; }
+  .field{ display:grid; grid-template-columns: 1fr auto; gap: 10px; align-items:center; margin:10px 0; }
+  .field label{ font-size:14px; color:#333; }
+  .field input[type="range"]{ width: 100%; }
+  .val{ font-variant-numeric: tabular-nums; color:#2b90ff; min-width: 44px; text-align:right; }
+
+  /* Stage area */
+  .stage-wrap{
+    background:#fff;
+    border:1px solid #e6e6ef;
+    border-radius:8px;
+    padding:16px;
+  }
+
+  .legend{
+    display:flex; gap:12px; flex-wrap:wrap; font-size:13px; margin-bottom:12px;
+  }
+  .legend > span{ display:inline-flex; align-items:center; gap:6px; }
+  .chip{ width:14px; height:14px; border-radius:3px; display:inline-block; }
+
+  /*
+    The demo box is nested to make each area visible with colors.
+    Outer wrapper contributes the MARGIN (via outer spacing setting).
+  */
+  .outer{
+    margin: calc(var(--mar, 20) * 1px);
+    /* helpful baseline grid */
+    background-image: linear-gradient(transparent 23px, rgba(0,0,0,.05) 24px);
+    background-size: 24px 24px;
+    padding: 8px;
+    border-radius:6px;
+  }
+
+  /* The actual demo box */
+  .demo-box{
+    /* Outline shows total area (margin not included) */
+    outline: 2px dotted #999;
+    outline-offset: 4px;
+
+    /* Border + Padding are adjustable */
+    border: calc(var(--bor, 4) * 1px) solid #2b90ff;
+    padding: calc(var(--pad, 16) * 1px);
+
+    /* Visual fills for areas */
+    /* padding is shown via background on the element itself */
+    background: rgba(46, 204, 113, 0.25); /* light green for padding area */
+
+    /* Content box style */
+    color:#111;
+    border-radius: 6px;
+    width: 240px; /* fixed content width to see size changes clearly */
+    background-clip: padding-box; /* keep padding color inside border */
+  }
+
+  /* Content area */
+  .content{
+    background:#fff;
+    border-radius:4px;
+    padding: 10px;
+    box-shadow: 0 0 0 1px rgba(0,0,0,.05) inset;
+  }
+
+  /* A helper element to show margin visually around the box */
+  .margin-visual{
+    background: rgba(255, 159, 67, 0.25); /* orange for margin area */
+    padding: 6px;
+    border-radius: 6px;
+  }
+
+  .readout{
+    margin-top: 12px;
+    font-size: 13px;
+    color:#333;
+    display:flex;
+    gap:16px;
+    flex-wrap:wrap;
+  }
+  .readout span b{ color:#000; }
+  code{ background:#f0f1f7; padding:2px 6px; border-radius:4px; }

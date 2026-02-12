@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="boxModel.css">
+<title>Margin vs Border vs Padding – Demo</title>
+</head>
+<body>
+
+<h1>Margin vs Border vs Padding</h1>
+<p class="sub">Use the sliders to see how each layer affects layout. The dotted outline shows the element’s border-box size.</p>
+
+<div class="panel">
+  <!-- Controls -->
+  <div class="controls">
+    <h2>Adjust Values (px)</h2>
+    <div class="field">
+      <label for="pad">Padding</label>
+      <div>
+        <input id="pad" type="range" min="0" max="60" value="16" />
+      </div>
+      <div class="val" id="padVal">16</div>
+    </div>
+    <div class="field">
+      <label for="bor">Border</label>
+      <div>
+        <input id="bor" type="range" min="0" max="24" value="4" />
+      </div>
+      <div class="val" id="borVal">4</div>
+    </div>
+    <div class="field">
+      <label for="mar">Margin</label>
+      <div>
+        <input id="mar" type="range" min="0" max="60" value="20" />
+      </div>
+      <div class="val" id="marVal">20</div>
+    </div>
+
+    <div class="readout" id="sizeOut">
+      <!-- JS will fill actual sizes -->
+    </div>
+  </div>
+
+  <!-- Stage -->
+  <div class="stage-wrap">
+    <div class="legend">
+      <span><span class="chip" style="background:rgba(255,159,67,.5)"></span>Margin (outside)</span>
+      <span><span class="chip" style="background:#2b90ff"></span>Border</span>
+      <span><span class="chip" style="background:rgba(46,204,113,.5)"></span>Padding (inside)</span>
+      <span><span class="chip" style="background:#fff; box-shadow:0 0 0 1px rgba(0,0,0,.15) inset"></span>Content</span>
+    </div>
+
+    <div class="margin-visual">
+      <div class="outer" id="outer">
+        <div class="demo-box" id="box">
+          <div class="content">
+            <b>Content area</b><br>
+            This is the actual text and images inside the element.
+            <div style="margin-top:6px; font-size:12px; color:#555;">
+              Content size changes with <code>width/height</code> and is pushed by <code>padding</code>.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p class="readout" style="margin-top:12px;">
+      Quick reference: <code>total width = margin-left + border-left + padding-left + content + padding-right + border-right + margin-right</code>
+    </p>
+  </div>
+</div>
+
+ <script src="boxModel.js"></script>
+
+</body>
+</html>

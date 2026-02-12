@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Box Alignment Demo</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<header>
+		<h1 class="header"></h1>
+	</header>
+    
+    <section class="input-section">
+
+        <label for="bank">Bank Name</label>
+        <select name="bank" id="bank">
+            <option value="Indian Bank">Indian Bank</option>
+            <option value="ICICI Bank">ICICI Bank</option>
+        </select>
+        <br>
+
+        <label for="date">Transaction Date</label>
+        <input type="date" name="tranDate" id="date">
+        <br>
+
+        <input type="radio" name="type" id="credit" value="credit">
+        <label for="credit">Credit</label>
+        <br>
+
+        <input type="radio" name="type" id="debit" value="debit">
+        <label for="debit">Debit</label>
+        <br>
+
+        <label for="amount">Amount</label>  
+        <input type="number" name="amount" id="amount" placeholder="Amount">
+        <br>
+
+        <label for="category">Category</label>
+        <select name="category" id="category">
+            <option value="Barath">Barath</option>
+            <option value="Ranganathan">Ranganathan</option>
+            <option value="Saraswathi">Saraswathi</option>
+            <option value="Lokesh">Lokesh</option>
+            <option value="Raj">Raj</option>
+            <option value="Others">Others</option>
+        </select>
+        <br>
+
+        <label for="remark">Remarks</label>
+        <input type="text" name="remark" id="remark" placeholder="Remarks">
+
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
